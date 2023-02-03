@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserRegisterComponent } from './comp/user-register/user-register.component';
@@ -14,6 +14,9 @@ import { AdminLoginComponent } from './compAdmin/admin-login/admin-login.compone
 import { AdminHomeComponent } from './compAdmin/admin-home/admin-home.component';
 import { AdminDashComponent } from './compAdmin/admin-dash/admin-dash.component';
 import { AdminUserViewComponent } from './compAdmin/admin-user-view/admin-user-view.component';
+import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './comp/profile/profile.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -26,13 +29,17 @@ import { AdminUserViewComponent } from './compAdmin/admin-user-view/admin-user-v
     AdminLoginComponent,
     AdminHomeComponent,
     AdminDashComponent,
-    AdminUserViewComponent
+    AdminUserViewComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    HttpClientModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

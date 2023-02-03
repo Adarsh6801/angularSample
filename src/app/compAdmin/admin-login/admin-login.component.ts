@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-login',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-login.component.css']
 })
 export class AdminLoginComponent {
-
+  onSubmit(data:NgForm){
+    console.log(data.value);
+    
+  }
 }
