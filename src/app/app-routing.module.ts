@@ -7,6 +7,7 @@ import { ProfileComponent } from './comp/profile/profile.component';
 import { UserRegisterComponent } from './comp/user-register/user-register.component';
 import { UserSigninComponent } from './comp/user-signin/user-signin.component';
 import { AdminDashComponent } from './compAdmin/admin-dash/admin-dash.component';
+import { AdminHomeComponent } from './compAdmin/admin-home/admin-home.component';
 import { AdminLoginComponent } from './compAdmin/admin-login/admin-login.component';
 import { AdminUserViewComponent } from './compAdmin/admin-user-view/admin-user-view.component';
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'profile',component:ProfileComponent},
   {path:'adminLogin',component:AdminLoginComponent},
   {path:'admindash',component:AdminDashComponent},
+  {path:'admin-home',component:AdminHomeComponent},
   {path:'adminUserView',component:AdminUserViewComponent},
 
 
