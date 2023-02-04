@@ -18,6 +18,8 @@ import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from './comp/profile/profile.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     AdminHomeComponent,
     AdminDashComponent,
     AdminUserViewComponent,
-    ProfileComponent
+    ProfileComponent,
+
   ],
   imports: [
     BrowserModule,

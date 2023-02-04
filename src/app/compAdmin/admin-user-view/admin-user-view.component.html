@@ -1,6 +1,5 @@
-<div>
-  <app-admin-dash></app-admin-dash>
-</div>
+
+
 <div class="text-center">
   <h1 class="text-danger text-center" >Users</h1>
   <table>
@@ -13,11 +12,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td scope="row" data-label="Acount">Visa - 3412</td>
-        <td data-label="Due Date">02/01/2016</td>
-        <td data-label="Amount">$842</td>
-        <td data-label="Period">01/01/2016 - 01/31/2016</td>
+      <tr *ngFor=" let user of allUsers">
+        <td scope="row" data-label="Acount">{{user.lastName}}</td>
+        <td data-label="Due Date">{{user.firstName}}</td>
+        <td data-label="Amount">{{user.email}}</td>
+        <td data-label="Period" >
+          <button class="btn btn-danger" (click)="block(user._id) " *ngIf="user.status" >Block</button>
+          <button class="btn btn-warning" (click)="unblock(user._id)" *ngIf="!user.status" >Unblock</button>
+        </td>
       </tr>
     </tbody>
   </table>
